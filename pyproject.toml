@@ -30,6 +30,7 @@ include = [
 python = "^3.6.2"
 motor = "^2.5.1"
 dnspython = "^2.2.0"
+httpx = "^0.22.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.1.0"
