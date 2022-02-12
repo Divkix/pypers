@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "pypers"
+version = "1.0.0"
+description = "A utilities module made for personal use, has small snippets which I use in many projects."
+authors = ["Divkix <techdroidroot@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Divkix/pypers"
+repository = "https://github.com/Divkix/pypers"
+keywords = ["pypers", "divkix helpers", "python helpers", "py helpers"]
+classifiers = [
+        "Development Status :: 5 - Production/Stable",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Utilities",
+    ]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/Divkix/pypers/issues"
+"Community" = "https://t.me/DivideProjects"
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+motor = "^2.5.1"
+dnspython = "^2.2.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1.0"
+isort = "^5.10.1"
+pyclean = "^2.0.0"
+pre-commit = "^2.17.0"
+pylint = "^2.12.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
