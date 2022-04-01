@@ -1,0 +1,35 @@
+site_name: Pypers
+repo_url: https://github.com/Divkix/pypers/
+site_description: Package with helper scripts which can be used to perform simple tasks using different libraries.
+edit_uri: tree/main/docs/
+site_author: Divkix
+use_directory_urls: true
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: img/circle-icon.png
+  favicon: img/name.png
+  palette:
+    - scheme: preference
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+plugins:
+  - git-revision-date
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Divkix/pypers
+      name: pypers on Github
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
