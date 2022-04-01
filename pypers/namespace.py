@@ -10,7 +10,7 @@ class Namespace(SimpleNamespace):
 
     def __init__(
         self,
-        dictionary: Dict[str, Any] = {},
+        dictionary: Dict[str, Any] = None,
         **kwargs,
     ) -> None:
         """
@@ -20,6 +20,8 @@ class Namespace(SimpleNamespace):
             dictionary: The dictionary to initialize the namespace with.
             kwargs: Any additional keyword arguments to pass to the namespace.
         """
+        if dictionary is None:
+            dictionary = {}
         super().__init__(**kwargs)
         for key, value in dictionary.items():
             if isinstance(value, list):
