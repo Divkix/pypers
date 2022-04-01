@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pypers"
-version = "1.0.0"
+version = "1.1.0"
 description = "A utilities module made for personal use, has small snippets which I use in many projects."
 authors = ["Divkix <techdroidroot@gmail.com>"]
 license = "MIT"
@@ -32,6 +32,7 @@ motor = "^2.5.1"
 dnspython = "^2.2.0"
 httpx = "^0.22.0"
 Pillow = "^9.0.1"
+aiohttp = "^3.8.1"
 
 [tool.poetry.dev-dependencies]
 black = "^22.1.0"
