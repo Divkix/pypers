@@ -1,3 +1,6 @@
+# it is a library, so removing lock file
+poetry.lock
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
