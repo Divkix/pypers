@@ -4,6 +4,13 @@ site_description: Package with helper scripts which can be used to perform simpl
 edit_uri: tree/main/docs/
 site_author: Divkix
 use_directory_urls: true
+nav:
+  - Home: index.md
+  - Formatters: formatters.md
+  - Mongo Helpers: mongo_helpers.md
+  - Namespace: namespace.md
+  - Image Tools: image_tools.md
+  - URL Helpers: url_helpers.md
 theme:
   name: material
   custom_dir: docs/overrides
