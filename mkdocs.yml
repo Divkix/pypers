@@ -11,11 +11,10 @@ nav:
   - Namespace: namespace.md
   - Image Tools: image_tools.md
   - URL Helpers: url_helpers.md
+  - Video Tools: video_tools.md
 theme:
   name: material
   custom_dir: docs/overrides
-  logo: img/circle-icon.png
-  favicon: img/name.png
   palette:
     - scheme: preference
       toggle:
