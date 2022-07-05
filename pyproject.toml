@@ -28,7 +28,7 @@ include = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-motor = "^2.5.1"
+motor = "^3.0.0"
 dnspython = "^2.2.1"
 httpx = ">=0.22,<0.24"
 Pillow = "^9.2.0"
