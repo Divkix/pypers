@@ -14,7 +14,6 @@ nav:
   - Video Tools: video_tools.md
 theme:
   name: material
-  custom_dir: docs/overrides
   palette:
     - scheme: preference
       toggle:
