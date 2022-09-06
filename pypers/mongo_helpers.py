@@ -90,7 +90,8 @@ class AsyncMongoDB:
         return await self.collection.count_documents(query)
 
     async def delete_one(
-        self, query: Optional[Union[Dict[str, Any], None]]
+        self,
+        query: Optional[Union[Dict[str, Any], None]],
     ) -> Tuple[int, int]:
         """
         Delete one entry from collection.
