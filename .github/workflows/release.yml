@@ -92,19 +92,6 @@ jobs:
           poetry config virtualenvs.create false
           poetry install
 
-  push-to-pypi:
-    name: Push to PyPI
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Publish python poetry package
-        uses: JRubics/poetry-publish@v1.13
-        with:
-          pypi_token: ${{ secrets.PYPI_TOKEN }}
-
   # create a release on github
   release:
     name: Release
@@ -124,3 +111,18 @@ jobs:
           tag_name: ${{ needs.get-repo-info.outputs.tag }}
           body: |-
            ${{ github.event.repository.name }} ${{ needs.get-repo-info.outputs.tag }}
+
+  push-to-pypi:
+    name: Push to PyPI
+    needs:
+     - release
+     - build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Publish python poetry package
+        uses: JRubics/poetry-publish@v1.13
+        with:
+          pypi_token: ${{ secrets.PYPI_TOKEN }}
