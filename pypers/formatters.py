@@ -54,3 +54,25 @@ class Formatters:
             + ((str(milliseconds) + "ms, ") if milliseconds else "")
         )
         return tmp[:-2]
+
+    @staticmethod
+    def get_time_in_seconds(time: str) -> int:
+        """
+        Convert time in a string format to seconds.
+
+        Args:
+            time: The time in string format with m/h/d/w/m/y.
+
+        Returns:
+            The time in seconds.
+        """
+        times = {
+            "s": 1,
+            "m": 60,
+            "h": 3600,
+            "d": 86400,
+            "w": 604800,
+            "m": 2630000,
+            "y": 31536000,
+        }
+        return int(time[:-1]) * times[time[-1]]
