@@ -11,7 +11,8 @@ print(humanbytes_size)
 human_time = Formatters.time_formatter(15000)
 print(human_time)
 
-# time being in m/h/d/w/m/y.
+# time being in s/min/h/d/w/m/y.
+# Note: use 'min' for minutes
 seconds = Formatters.get_time_in_seconds("2w")
 print(seconds)
 ```

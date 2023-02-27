@@ -45,10 +45,12 @@ class Formatters:
         minutes, seconds = divmod(seconds, 60)
         hours, minutes = divmod(minutes, 60)
         days, hours = divmod(hours, 24)
+        months, days = divmod(days, 30)
         tmp = (
-            ((str(days) + "d, ") if days else "")
+            ((str(months) + "m, ") if months else "")
+            + ((str(days) + "d, ") if days else "")
             + ((str(hours) + "h, ") if hours else "")
-            + ((str(minutes) + "m, ") if minutes else "")
+            + ((str(minutes) + "min, ") if minutes else "")
             + ((str(seconds) + "s, ") if seconds else "")
         )
         return tmp[:-2]
@@ -59,14 +61,14 @@ class Formatters:
         Convert time in a string format to seconds.
 
         Args:
-            time: The time in string format with m/h/d/w/m/y.
+            time: The time in string format with s/min/h/d/w/m/y. Note: use 'min' for minutes.
 
         Returns:
             The time in seconds.
         """
         times = {
             "s": 1,
-            "m": 60,
+            "min": 60,
             "h": 3600,
             "d": 86400,
             "w": 604800,
