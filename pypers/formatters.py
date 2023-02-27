@@ -81,4 +81,4 @@ class Formatters:
         # Check if last char is in the times dictionary
         if not time_last_chars in times:
             return -1
-        return int(time_last_chars) * times[time_last_chars]
+        return int(time[0]) * times[time_last_chars]
