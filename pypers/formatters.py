@@ -66,6 +66,9 @@ class Formatters:
         Returns:
             The time in seconds.
         """
+        time = time.lower()
+        # the last char of the time, e.g. s, min, h, d, w, m, y
+        time_last_chars = time[1:]
         times = {
             "s": 1,
             "min": 60,
@@ -76,6 +79,6 @@ class Formatters:
             "y": 31536000,
         }
         # Check if last char is in the times dictionary
-        if not time[-1].lower() in times:
+        if not time_last_chars in times:
             return -1
-        return int(time[:-1]) * times[time[-1]]
+        return int(time_last_chars) * times[time_last_chars]
