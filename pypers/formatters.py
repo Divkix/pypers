@@ -31,18 +31,17 @@ class Formatters:
 
     @staticmethod
     def time_formatter(
-        milliseconds: int,
+        seconds: int,
     ) -> str:
         """
-        Format time from milliseconds to hh:mm:ss
+        Format time from seconds to hh:mm:ss
 
         Args:
-            milliseconds: The time in milliseconds.
+            seconds: The time in seconds.
 
         Returns:
             The formatted time.
         """
-        seconds, milliseconds = divmod(int(milliseconds), 1000)
         minutes, seconds = divmod(seconds, 60)
         hours, minutes = divmod(minutes, 60)
         days, hours = divmod(hours, 24)
@@ -51,7 +50,6 @@ class Formatters:
             + ((str(hours) + "h, ") if hours else "")
             + ((str(minutes) + "m, ") if minutes else "")
             + ((str(seconds) + "s, ") if seconds else "")
-            + ((str(milliseconds) + "ms, ") if milliseconds else "")
         )
         return tmp[:-2]
 
