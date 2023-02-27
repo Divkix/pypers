@@ -45,9 +45,11 @@ class Formatters:
         minutes, seconds = divmod(seconds, 60)
         hours, minutes = divmod(minutes, 60)
         days, hours = divmod(hours, 24)
+        weeks, days = divmod(days, 7)
         months, days = divmod(days, 30)
         tmp = (
             ((str(months) + "m, ") if months else "")
+            + ((str(weeks) + "w, ") if weeks else "")
             + ((str(days) + "d, ") if days else "")
             + ((str(hours) + "h, ") if hours else "")
             + ((str(minutes) + "min, ") if minutes else "")
@@ -68,7 +70,7 @@ class Formatters:
         """
         time = time.lower()
         # the last char of the time, e.g. s, m, h, d, w
-        time_last_chars = time[1:]
+        time_last_chars = time[-1]
         times = {
             "s": 1,
             "m": 60,
