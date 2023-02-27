@@ -75,4 +75,7 @@ class Formatters:
             "m": 2630000,
             "y": 31536000,
         }
+        # Check if last char is in the times dictionary
+        if not time[-1].lower() in times:
+            return 0
         return int(time[:-1]) * times[time[-1]]
