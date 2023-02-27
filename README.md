@@ -15,4 +15,3 @@ Contains some helper function which make up its name: python+helpers = pypers.
 Read the docs:
 
 https://pypers.divkix.me
-
