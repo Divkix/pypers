@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pypers"
-version = "1.2.14"
+version = "1.3.0"
 description = "A utilities module made for personal use, has small snippets which I use in many projects."
 authors = ["Divkix <divkix@divkix.me>"]
 license = "MIT"
