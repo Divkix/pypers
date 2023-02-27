@@ -77,5 +77,5 @@ class Formatters:
         }
         # Check if last char is in the times dictionary
         if not time[-1].lower() in times:
-            return 0
+            return -1
         return int(time[:-1]) * times[time[-1]]
