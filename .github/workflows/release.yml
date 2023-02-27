@@ -3,7 +3,7 @@ name: Release Package
 on:
   push:
     tags:
-      - '*'
+      - "*"
   workflow_dispatch:
     inputs:
       version_level:
@@ -36,7 +36,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
         os: [ubuntu-latest, macOS-latest, windows-latest]
     uses: divkix/reusable-workflows/.github/workflows/build-and-test-python-package.yml@main
     with:
@@ -57,8 +57,8 @@ jobs:
   push-to-pypi:
     if: always()
     needs:
-     - create-release
-     - get-repo-info
+      - create-release
+      - get-repo-info
     uses: divkix/reusable-workflows/.github/workflows/push-to-pypi.yml@main
     with:
       tag: ${{ needs.get-repo-info.outputs.tag }}
